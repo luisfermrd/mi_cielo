@@ -1,0 +1,168 @@
+html,
+.testimonios {
+    position: relative;
+    height: 100%;
+}
+
+.testimonios {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.testimonios .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.testimonios .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    min-height: 500px;
+}
+
+
+
+/* Testimonio */
+
+.testimonio {
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 1s;
+    border-radius: 10px;
+}
+
+.testimonio p{
+    text-align: justify;
+}
+
+.testimonio  img {
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.testimonio:hover {
+    transform: translateY(-20px);
+    background: #e7008a;
+    color: white;
+}
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.rating .testimonio {
+    padding-top: 100px;
+}
+
+.rating .ri-star-fill,
+.rating .ri-star-line,
+.rating .ri-star-half-line {
+    color: #ff253b;
+}
+
+.ri-double-quotes-l {
+    font-size: 34px;
+    color: #ff523b;
+}
+
+
+
+.modal-container {
+	display: none;
+	background-color: rgba(0, 0, 0, 0.3);
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	transition: 0.4s ease-in-out;
+	z-index: 1000;
+}
+
+.show2 {
+	display: flex;
+}
+
+.modal {
+	display: block;
+	background-color: #fff;
+	width: 600px;
+	height: 500px;
+	max-width: 100%;
+	padding: 30px 50px;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	text-align: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	transition: 0.4s ease-in-out;
+
+}
+
+.modal h1 {
+	margin: 0;
+	padding-bottom: 20px;
+}
+
+.modal .img_logo {
+	width: 100%;
+	position: relative;
+}
+
+.modal .img_logo img {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 80px;
+}
+
+.modal p {
+	text-align: justify;
+}
+
+.modal .botones {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.modal .botones #closeTerminos {
+	background: #e7008a;
+}
+
+.modal .botones #noQuieroVerMasEsto {
+	background: #5000ca;
+}
+
+
+.icon {
+	position: absolute;
+	top: 8px;
+	left: 13px;
+	font-size: 18px;
+}
