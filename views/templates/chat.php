@@ -1,28 +1,23 @@
-<article class="chat">
-    <header>
-        <h4>Chat mi cielo</h4>
-        <div>
-            <div class="icon guion">
-                <span></span>
-            </div>
-            <div class="icon x">
-                <span></span>
-                <span></span>
-            </div>
+<div class="chat-container" style="display: none;">
+    <div class="chat-header">
+        <div class="header-left">Chat Mi Cielo</div>
+        <div class="header-right">
+            <button id="minimize-button">-</button>
+            <button id="close-button">X</button>
         </div>
-    </header>
-    <main>
-        <div class="msg-right">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum provident animi illum voluptatum sit harum ducimus delectus dolor quos quod quidem sunt pariatur minus iusto odit, adipisci culpa laboriosam nam.
-            </p>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+        <!-- Ejemplo de mensaje recibido -->
+        <div class="message received">
+            <div class="message-bubble">¡Hola! ¿Cómo estás?</div>
         </div>
-        <div class="msg-left">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum provident animi illum voluptatum sit harum ducimus delectus dolor quos quod quidem sunt pariatur minus iusto odit, adipisci culpa laboriosam nam.
-            </p>
+        <!-- Ejemplo de mensaje enviado -->
+        <div class="message sent">
+            <div class="message-bubble">Hola, estoy bien, ¿y tú?</div>
         </div>
-
-    </main>
-    <footer>
-
-    </footer>
-</article>
+    </div>
+    <div class="chat-input">
+        <input type="text" id="message-input" placeholder="Escribe un mensaje" />
+        <button id="send-button">Enviar</button>
+    </div>
+</div>

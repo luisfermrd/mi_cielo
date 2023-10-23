@@ -17,3 +17,7 @@
     <p id="mensaje_alarma"></p>
     <button id="detenerAlarma">Cerrar</button>
 </section>
+
+<?php
+include_once('chat.php');
+?>

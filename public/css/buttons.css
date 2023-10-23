@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 10px;
   right: 10px;
-  z-index: 10000;
+  z-index: 3000;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -126,4 +126,146 @@
   50% {
     background-color: transparent; /* Fondo transparente en la mitad de la animación */
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.chat-container {
+  width: 400px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease;
+  transform: translateY(0);
+  max-height: 100%;
+  bottom: 0;
+  right: 120px;
+  position: fixed;
+  z-index: 3000;
+}
+
+.minimized {
+  transform: translateY(calc(100% - 40px));
+  max-height: 40px;
+  height: 40px;
+}
+
+.chat-header {
+  background-color: #e7008a;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.header-left {
+  font-weight: bold;
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+}
+
+#minimize-button,
+#close-button {
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#minimize-button:hover,
+#close-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.chat-messages {
+  flex: 1;
+  min-height: 300px;
+  max-height: 300px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+
+#message-input {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+#send-button {
+  background-color: #e7008a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#send-button:hover {
+  background-color: #a80166;
+}
+
+.message {
+  margin: 10px;
+  clear: both;
+  overflow: hidden;
+}
+
+.message-bubble {
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  word-wrap: break-word; /* Romper palabras largas y ajustar al contenedor */
+  overflow-wrap: break-word; /* Alternativa para compatibilidad adicional */
+  white-space: normal; /* Control de espacios en blanco */
+}
+
+.received {
+  float: left;
+  background-color: #ff00994f;
+  border-radius: 15px 15px 15px 0;
+}
+
+.sent {
+  float: right;
+  background-color: #b822e662;
+  border-radius: 15px 15px 0 15px;
 }

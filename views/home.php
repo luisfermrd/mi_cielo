@@ -113,6 +113,16 @@ if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
                         </div>
                     </a>
                 </div>
+                <div class="col d-flex align-content-center justify-content-center">
+                    <a href="violencia/violencia-digital-cibernetica.php" style="text-decoration: none; color: black;">
+                        <div class="card" style="width: 15rem;">
+                            <img src="../public/img/violencia-digital.jpg" class="card-img-top" alt="..." style="min-height: 15rem;">
+                            <div class="card-body">
+                                <p class="card-text text-center">Violencia digital o cibernética</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
             <div class="mb-5 mt-5">
                 <h3>Preguntas frecuentes</h3>
@@ -263,6 +273,7 @@ if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
             </div>
             <div class="mb-5 mt-5">
                 <h3>Historias de Resiliencia</h3>
+                <p>Esta sección ofrece relatos, historias y casos de recuperación de las verdaderas protagonistas, las mujeres que han  sufrido y que con enorme valentía, coraje y generosidad nos aportan información valiosísima para entender este fenómeno y poder combatirlo.</p>
                 <div class="swiper mySwiper2" style="height: 75vh;">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">

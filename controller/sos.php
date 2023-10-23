@@ -51,12 +51,11 @@ if (isset($id_user)) {
 
 
       foreach ($data as $value) {
-        $mensaje = $mensaje . "Hola " . $value['name'] . ', ' . $name . ' te tiene registrado/a como contacto de emergencia en la app mi cielo, en estos momentos necesita ayuda. Por favor, ponte en contacto con sus familiares. ';
-        if ($value['message'] != null) {
-          $mensaje = $mensaje . 'Dejo este mensaje para ti: ' . $value['message'] . '. ';
-        }
+
+        /* Hola Luis Miranda, eres el contacto de emergencia registrado en la app "Mi Cielo" y se necesita tu ayuda. Por favor, comunícate con sus familiares. Puedes verificar su posible ubicación aquí: https://www.google.com/maps/search/?api=1&query=9.240576,-75.726848  Puede estar a unos 4.2 km de esa ubicación. */
+        $mensaje = $mensaje . "Hola " . $value['name'] . ', ' . $name . ' te tiene registrado como contacto de emergencia en la app Mi Cielo, y necesita de tu ayuda. Por favor, comunicate con sus familiares. ';
         if ($precision != '') {
-          $mensaje = $mensaje . 'Su ultima posible ubicacion la puedes consultar aqui: ' . $url . ' puede estar a ' . $precision . ' a la redonda de dicha ubicacion';
+          $mensaje = $mensaje . 'Puedes verificar su posible ubicación aqui: ' . $url . ' puede estar a unos ' . $precision . ' de esa ubicación.';
         }
         $phone = preg_replace("/\s+/", "", $value['number_phone']);
         $message = $twilio->messages
