@@ -68,7 +68,7 @@ if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
                         <div class="card" style="width: 15rem;">
                             <img src="../public/img/violencia2.jpg" class="card-img-top" alt="..." style="min-height: 15rem;">
                             <div class="card-body">
-                                <p class="card-text text-center">Violencia Sexual </p>
+                                <p class="card-text text-center">Violencia Sexual</p>
                             </div>
                         </div>
                     </a>
@@ -78,7 +78,7 @@ if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
                         <div class="card" style="width: 15rem;">
                             <img src="../public/img/violencia3.jpg" class="card-img-top" alt="..." style="min-height: 15rem;">
                             <div class="card-body">
-                                <p class="card-text text-center">Violencia económica </p>
+                                <p class="card-text text-center">Violencia económica</p>
                             </div>
                         </div>
                     </a>
@@ -86,9 +86,9 @@ if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
                 <div class="col d-flex align-content-center justify-content-center">
                     <a href="violencia/politica.php" style="text-decoration: none; color: black;">
                         <div class="card" style="width: 15rem;">
-                            <img src="../public/img/violencia4.png" class="card-img-top" alt="..." style="min-height: 15rem;">
+                            <img src="../public/img/violencia-politica.jpg" class="card-img-top" alt="..." style="min-height: 15rem;">
                             <div class="card-body">
-                                <p class="card-text text-center">Violencia politica </p>
+                                <p class="card-text text-center">Violencia politica</p>
                             </div>
                         </div>
                     </a>
@@ -98,7 +98,17 @@ if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
                         <div class="card" style="width: 15rem;">
                             <img src="../public/img/violencia5.png" class="card-img-top" alt="..." style="min-height: 15rem;">
                             <div class="card-body">
-                                <p class="card-text text-center">Acoso Sexual </p>
+                                <p class="card-text text-center">Acoso Sexual</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col d-flex align-content-center justify-content-center">
+                    <a href="violencia/violencia-familiar.php" style="text-decoration: none; color: black;">
+                        <div class="card" style="width: 15rem;">
+                            <img src="../public/img/violencia-familiar.jpg" class="card-img-top" alt="..." style="min-height: 15rem;">
+                            <div class="card-body">
+                                <p class="card-text text-center">Violencia Familiar</p>
                             </div>
                         </div>
                     </a>
@@ -158,6 +168,125 @@ if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
                             </div>
                         </div>
                     </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                ¿Cómo puedo denunciar la violencia?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" style="width: 100%;" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Para denunciar la violencia, puedes comunicarte con la policía local o con una organización de apoyo a víctimas de violencia doméstica. El personal de estas organizaciones puede ayudarte a tomar los pasos necesarios.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                ¿Qué pasa si denuncio a mi agresor?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" style="width: 100%;" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Las leyes de protección de víctimas de violencia doméstica varían según la ubicación, pero puedes solicitar una orden de restricción para protegerte de posibles represalias. También puedes buscar asesoramiento legal para comprender tus derechos y opciones.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                ¿Cómo puedo proteger a mis hijos?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" style="width: 100%;" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Consulta con profesionales en organizaciones de apoyo y asesoramiento familiar para ayudarte a proteger a tus hijos. También puedes considerar solicitar una orden de protección para ellos.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                                ¿Dónde puedo encontrar apoyo emocional?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse" style="width: 100%;" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Busca consejería o terapia con un profesional de la salud mental especializado en violencia doméstica. Las organizaciones de apoyo suelen ofrecer recursos para el apoyo emocional.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOcho">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOcho" aria-expanded="false" aria-controls="flush-collapseOcho">
+                                ¿Puedo obtener una orden de restricción?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOcho" class="accordion-collapse collapse" style="width: 100%;" aria-labelledby="flush-headingOcho" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Sí, puedes solicitar una orden de restricción (también conocida como orden de protección) para mantener alejada a la persona que te está maltratando. Consulta a un abogado o a una organización de apoyo para obtener orientación sobre este proceso.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                                ¿Cómo puedo dejar la relación de manera segura?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseNine" class="accordion-collapse collapse" style="width: 100%;" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Habla con un profesional de una organización de apoyo sobre un plan de seguridad. Esto puede incluir la búsqueda de refugio seguro, el apoyo legal y el respaldo emocional.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                                ¿Cómo puedo recuperarme?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTen" class="accordion-collapse collapse" style="width: 100%;" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>La recuperación es un proceso que lleva tiempo. Busca apoyo en grupos de apoyo, terapia y servicios de consejería para ayudarte a reconstruir tu vida después de una relación abusiva.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5 mt-5">
+                <h3>Historias de Resiliencia</h3>
+                <div class="swiper mySwiper2" style="height: 75vh;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/B4FUJP9wfR0?si=zx3KtRCf7bEed65H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="swiper-slide">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/-bkqxCRqPC0?si=dVY6-gPOF7IpTqxV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="swiper-slide">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/uqWUys5Kg_A?si=SS-vJ86JqvMGqPIf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="swiper-slide">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yvHCzIpoz0k?si=dWj574gcmK_kF_PZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="swiper-slide">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/lqm7MuinGxE?si=IOl208JdNiiH5tNm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="swiper-slide">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/cCdyzXBWAJQ?si=O6J1_CK0hhB9bGMX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next" style="color: #e7008a;"></div>
+                    <div class="swiper-button-prev" style="color: #e7008a;"></div>
+                    <div class="swiper-pagination" style="color: #e7008a;"></div>
                 </div>
             </div>
             <br><br><br>

@@ -18,7 +18,7 @@ if (!isset($_SESSION["id_user"])) {
             <h1>Violencia politica</h1>
             <div class="d-flex justify-content-center align-content-center">
                 <div class="text-center" style="width: 700px;">
-                    <img src="../../public/img/violencia-politica.jpg" class="rounded img-fluid" alt="...">
+                    <img src="../../public/img/violencia-politica-2.jpg" class="rounded img-fluid" alt="...">
                     <p class="p-2" style="color: red;">Hay violencia política cuando se le impide a una mujer ejercer su derecho a la participación ciudadana, política o comunitaria.</p>
                 </div>
             </div>
