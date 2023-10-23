@@ -13,8 +13,7 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="shortcut icon" href="../../public/img/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../public/css/home.css">
-    <link rel="stylesheet" href="../../public/css/loader.css">
-    <link rel="stylesheet" href="../public/css/buttons.css">
+    <link rel="shortcut icon" href="../../../public/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../../public/css/home.css">
+    <link rel="stylesheet" href="../../../public/css/loader.css">
     

@@ -17,4 +17,5 @@
     <link rel="stylesheet" href="../public/css/home.css">
     <link rel="stylesheet" href="../public/css/test.css">
     <link rel="stylesheet" href="../public/css/loader.css">
+    <link rel="stylesheet" href="../public/css/buttons.css">
     

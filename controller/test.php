@@ -34,9 +34,9 @@ if (isset($_POST['opcion'])) {
 
                     include_once('../config/conexion.php');
 
-                    $sql = "UPDATE test SET p1 = ?, p2 = ?, p3 = ?, p4 = ?, p5 = ?, p6 = ?, p7 = ?, p8 = ?, p9 = ?, p10 = ?, p11 = ? WHERE id_user = ?;";
+                    $sql = "UPDATE test SET p1 = ?, p2 = ?, p3 = ?, p4 = ?, p5 = ?, p6 = ?, p7 = ?, p8 = ?, p9 = ?, p10 = ?, p11 = ?, respondio = ? WHERE id_user = ?;";
 
-                    $datos = array($p1, $p2, $p3, $p4, $p5, $p6, $p7, $p8, $p9, $p10, $p11, $_SESSION['id_user']);
+                    $datos = array($p1, $p2, $p3, $p4, $p5, $p6, $p7, $p8, $p9, $p10, $p11, 1, $_SESSION['id_user']);
                     $data = ejecutarConsulta($sql, $datos, true);
 
                     if ($data) {

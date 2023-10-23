@@ -107,7 +107,7 @@ html,
 	display: block;
 	background-color: #fff;
 	width: 600px;
-	height: 500px;
+	height: 90%;
 	max-width: 100%;
 	padding: 30px 50px;
 	border-radius: 5px;
@@ -156,6 +156,13 @@ html,
 }
 
 .modal .botones #noQuieroVerMasEsto {
+	background: #5000ca;
+}
+.modal .botones #closeModal {
+	background: #e7008a;
+}
+
+.modal .botones #registrarContacto {
 	background: #5000ca;
 }
 

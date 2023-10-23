@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 
-if (!isset($_SESSION["id_user"])) {
+if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
   header("Location: ../index.html");
 } else {
   $pagine_active = basename($_SERVER['PHP_SELF'], '.php');
@@ -15,6 +15,7 @@ if (!isset($_SESSION["id_user"])) {
   <main>
     <?php
     include_once('templates/loader.php');
+    include_once('templates/buttons.php');
     ?>
     <!--Container Main start-->
     <div class="height-100 bg-light">
@@ -267,6 +268,7 @@ if (!isset($_SESSION["id_user"])) {
   <script src="../public/js/test.js"></script>
   <script src="../public/js/loader.js"></script>
   <script src="../public/js/menu.js"></script>
+    <script src="../public/js/sos.js"></script>
 
 
 

@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 
-if (!isset($_SESSION["id_user"])) {
+if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
     header("Location: ../index.html");
 } else {
     $pagine_active = basename($_SERVER['PHP_SELF'], '.php');
@@ -15,13 +15,14 @@ if (!isset($_SESSION["id_user"])) {
     <main>
         <?php
         include_once('templates/loader.php');
+        include_once('templates/buttons.php');
         ?>
         <!--Container Main start-->
         <div class="height-100 bg-light">
             <h1>Reportes</h1>
             <section class="container mb-5">
                 <h2 class="m-5 text-center">Detalles del reporte</h2>
-                <form id="formulario" class="row g-3 mb-5" method="post" action="../controller/reportes.php" enctype="multipart/form-data">
+                <form id="formulario" class="row g-3 mb-5" method="post" enctype="multipart/form-data">
                     <div class="col-md-6">
                         <label for="nombre" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -94,6 +95,7 @@ if (!isset($_SESSION["id_user"])) {
     <script src="../public/js/menu.js"></script>
     <script src="../public/js/loader.js"></script>
     <script src="../public/js/reportes.js"></script>
+    <script src="../public/js/sos.js"></script>
 
 
     </body>

@@ -136,7 +136,7 @@
  bottom: 0;
  border-radius: 30px 30px 0 0;
  left: -8px;
- z-index: -1;
+ z-index: 1;
  background-color: #ccc;
  
 }
@@ -149,7 +149,7 @@
   top: .5px;
   left: 1px;
   border-radius: 10px 10px 0 0;
-  z-index: 2;
+  z-index: 3;
   transition: 5s;
 }
 .violentometro .mercury2 {
@@ -159,7 +159,7 @@
   position: absolute;
   bottom: 0;
   border-radius: 10px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .violentometro .numbers {

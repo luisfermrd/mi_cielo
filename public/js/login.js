@@ -21,8 +21,11 @@ async function login() {
         processData: false,
         success: function (response) {
             if (response.status == 1) {
-                $(location).attr("href", "views/home.php");
-                form.reset();
+                if (response.role == 1) {
+                    $(location).attr("href", "views/home.php");
+                } else {
+                    $(location).attr("href", "views/admin/home.php");
+                }
             } else {
                 Swal.fire(
                     'Opps!',

@@ -16,5 +16,6 @@
     <link rel="shortcut icon" href="../public/img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="../public/css/home.css">
     <link rel="stylesheet" href="../public/css/loader.css">
+    <link rel="stylesheet" href="../public/css/buttons.css">
     
     

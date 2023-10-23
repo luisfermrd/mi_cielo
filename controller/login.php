@@ -23,7 +23,8 @@ if(empty($email) || empty($password)){
             $_SESSION['name']=$data[0]['name'];
             $_SESSION['id_user']=$data[0]['id_user'];
             $_SESSION['email']=$data[0]['email'];
-            echo json_encode(array("status"=>1,"message"=>"Acceso conseguido"));
+            $_SESSION['role']=$data[0]['role'];
+            echo json_encode(array("status"=>1,"message"=>"Acceso conseguido", "role" => $data[0]['role']));
         }else{
             echo json_encode(array("status"=>-1,"message"=>"Usuario o contraseña incorrectas!")); 
         }
