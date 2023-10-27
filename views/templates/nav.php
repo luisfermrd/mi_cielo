@@ -67,6 +67,10 @@
                     <span class="nav_name">Reportes</span>
                 </a>
                 </a>
+                <a href="<?php echo $ruta == "" ? "" : $ruta; ?>chat.php" class="nav_link <?php echo $pagine_active == "chat" ? "active" : ""; ?>">
+                    <i class='bx bxs-conversation nav_icon'></i>
+                    <span class="nav_name">Chat</span>
+                </a>
                 <a href="<?php echo $ruta == "" ? "" : $ruta; ?>testimonio.php" class="nav_link <?php echo $pagine_active == "testimonio" ? "active" : ""; ?>">
                     <i class='bx bxs-message-rounded-detail nav_icon'></i>
                     <span class="nav_name">Testimonio</span>

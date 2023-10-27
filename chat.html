@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat</title>
+</head>
+<body>
+    <body>
+        <button id="connnection">Conectar</button>
+        <div>
+            <label for="clientId">Your Client ID: </label>
+            <input type="text" id="clientId" placeholder="Enter your ID">
+        </div>
+        <div>
+            <label for="toClientId">Recipient's Client ID: </label>
+            <input type="text" id="toClientId" placeholder="Enter recipient's ID">
+        </div>
+        <div>
+            <label for="message">Message: </label>
+            <input type="text" id="message" placeholder="Enter your message">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+        <div id="chatMessages"></div>
+    
+        <script>
+            const clientIdInput = document.getElementById('clientId');
+            const toClientIdInput = document.getElementById('toClientId');
+            const messageInput = document.getElementById('message');
+            const chatMessages = document.getElementById('chatMessages');
+            const connnection = document.getElementById('connnection');
+            let socket;
+    
+            function connect() {
+                socket = new WebSocket('ws://localhost:8080/mi_cielo/server.php');
+                socket.onmessage = function (event) {
+                    const message = JSON.parse(event.data);
+                    if (message.type === 'chat') {
+                        chatMessages.innerHTML += `<p>${message.toClientId}: ${message.message}</p>`;
+                    }
+                };
+                socket.onopen = function (event) {
+                    socket.send(JSON.stringify({ type: 'register', clientId: clientIdInput.value }));
+                };
+            }
+    
+            function sendMessage() {
+                const toClientId = toClientIdInput.value;
+                const message = messageInput.value;
+                const data = { type: 'chat', toClientId, message };
+                console.log(data)
+                socket.send(JSON.stringify(data));
+                chatMessages.innerHTML += `<p>You: ${message}</p>`;
+                messageInput.value = '';
+            }
+
+            connnection.addEventListener('click',()=>{
+                alert('conet')
+                connect();
+            });
+    
+        </script>
+      </body>
+</body>
+</html>
