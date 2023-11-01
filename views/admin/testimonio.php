@@ -3,7 +3,7 @@ ob_start();
 session_start();
 
 if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 0) {
-    header("Location: ../index.html");
+    header("Location: ../../index.html");
 } else {
     $pagine_active = basename($_SERVER['PHP_SELF'], '.php');
     include_once('../templates/header2.php');

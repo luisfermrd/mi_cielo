@@ -253,6 +253,7 @@
   padding: 10px;
   border-radius: 10px;
   margin: 5px;
+  color: white;
   word-wrap: break-word; /* Romper palabras largas y ajustar al contenedor */
   overflow-wrap: break-word; /* Alternativa para compatibilidad adicional */
   white-space: normal; /* Control de espacios en blanco */
@@ -260,12 +261,37 @@
 
 .received {
   float: left;
-  background-color: #ff00994f;
+  background-color: #5000ca;
   border-radius: 15px 15px 15px 0;
 }
 
 .sent {
   float: right;
-  background-color: #b822e662;
+  background-color: #e7008a;
   border-radius: 15px 15px 0 15px;
+}
+
+
+.start-chat{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-chat button{
+  outline: none;
+  border: none;
+  background-color: #e7008a;
+  padding: 10px;
+  color: white;
+  transition: all .2s ease;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.start-chat button:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #e7008a;
 }

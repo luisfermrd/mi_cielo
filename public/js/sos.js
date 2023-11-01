@@ -16,7 +16,7 @@ function geolocationData() {
             longitude = position.coords.longitude;
             accuracy = position.coords.accuracy.toFixed(2); // Precisión en metros
             let tem = (accuracy / 1000);
-            precision = tem.toFixed(2)+" km";
+            precision = tem.toFixed(2) + " km";
             url = `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
         }, function (error) {
             // En caso de error al obtener la ubicación
@@ -91,18 +91,22 @@ async function sendSOS() {
 
 //chat
 
-
+let chatOpen = false;
 
 window.btnChat.addEventListener("click", function () {
     chatContainer.style.display = "block";
+    chatOpen = true;
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 });
 
 minimizeButton.addEventListener("click", function () {
     chatContainer.classList.toggle("minimized");
+    chatOpen = false;
 });
 
 closeButton.addEventListener("click", function () {
     chatContainer.style.display = "none"; // Oculta el chat
+    chatOpen = false;
 });
 
 document
@@ -110,39 +114,48 @@ document
     .addEventListener("click", function () {
         if (chatContainer.classList.contains("minimized")) {
             chatContainer.classList.remove("minimized");
-            localStorage.setItem('minimized', true);
         } else {
-            localStorage.setItem('minimized', false);
+            chatContainer.classList.add("minimized");
         }
     });
 
-sendButton.addEventListener("click", sendMessage);
-messageInput.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-        sendMessage();
-    }
+
+
+
+const btnStartChat = document.getElementById('start-chat');
+
+btnStartChat.addEventListener("click", function () {
+    startChat();
 });
 
-function sendMessage() {
-    const messageText = messageInput.value;
-    if (messageText.trim() !== "") {
-        addMessage(messageText, "sent");
-        messageInput.value = "";
-        setTimeout(function () {
-            addMessage("¡Recibido!", "received");
-        }, 1000);
-    }
+
+async function startChat() {
+    let data = new FormData();
+    data.append('opcion', 'start_chat')
+    data.append('id', $('#id_user').val())
+    await $.ajax({
+        type: "post",
+        url: "../controller/chat.php",
+        data: data,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+            if (response.status == 1) {
+                Swal.fire(
+                    'Ok!',
+                    response.message,
+                    'success'
+                  )
+                form.reset();
+            } else {
+                Swal.fire(
+                    'Advertencia!',
+                    response.message,
+                    'warning'
+                  )
+            }
+        }
+    });
 }
 
-function addMessage(message, messageType) {
-    const messageElement = document.createElement("div");
-    messageElement.className = "message " + messageType;
 
-    const messageBubble = document.createElement("div");
-    messageBubble.className = "message-bubble";
-    messageBubble.textContent = message;
-
-    messageElement.appendChild(messageBubble);
-    chatMessages.appendChild(messageElement);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-}

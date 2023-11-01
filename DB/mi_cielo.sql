@@ -85,21 +85,21 @@ CREATE TABLE contacts(
 
 
 CREATE TABLE conversations (
-    conversation_id INT PRIMARY KEY,
-    user_id INT,
+    conversation_id INT PRIMARY KEY auto_increment,
+    id_user INT,
     date_send TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    FOREIGN KEY (id_user) REFERENCES users(id_user) ON DELETE CASCADE
 );
 
 CREATE TABLE messages (
     message_id INT PRIMARY KEY auto_increment,
     conversation_id INT NOT NULL,
-    user_id INT NOT NULL,
+    id_user INT NOT NULL,
     content TEXT NOT NULL,
     date_send TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     see TINYINT(1) NOT NULL DEFAULT 0,
-    FOREIGN KEY (conversation_id) REFERENCES conversations(conversation_id),
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    FOREIGN KEY (conversation_id) REFERENCES conversations(conversation_id) ON DELETE CASCADE,
+    FOREIGN KEY (id_user) REFERENCES users(id_user) ON DELETE CASCADE
 );
 
 

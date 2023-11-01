@@ -269,6 +269,7 @@ if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
   <script src="../public/js/loader.js"></script>
   <script src="../public/js/menu.js"></script>
     <script src="../public/js/sos.js"></script>
+    <script src="../public/js/chat.js"></script>
 
 
 
