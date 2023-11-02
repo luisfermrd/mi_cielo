@@ -36,20 +36,15 @@ async function get_inputs() {
 
         response.data.forEach(element => {
           html += `<div class="swiper-slide slide-centrar">
-                    <div class="testimonio">
-                        <i class="ri-double-quotes-l"></i>
-                        <p>${element.message}</p>
-                        <div class="rating">
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-half-line"></i>
-                        </div>
-                        <img src="../../public/img/profile2.png" id="imgP" alt="anonimo">
-                      
-                    </div>
-                </div>`;
+          <div class="testimonio">
+              <i class="ri-double-quotes-l"></i>
+              <p>${element.message}</p>
+              <div class="rating">
+                  <strong><p>- <i>${element.name}</i></p></strong>
+              </div>
+            
+          </div>
+      </div>`;
         });
 
         document.getElementById('testimonios-container').innerHTML = html;

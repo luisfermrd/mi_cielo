@@ -93,13 +93,8 @@ async function get_inputs() {
                         <i class="ri-double-quotes-l"></i>
                         <p>${element.message}</p>
                         <div class="rating">
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-half-line"></i>
+                            <strong><p>- <i>${element.name}</i></p></strong>
                         </div>
-                        <img src="../public/img/profile2.png" id="imgP" alt="anonimo">
                       
                     </div>
                 </div>`;

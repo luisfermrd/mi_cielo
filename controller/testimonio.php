@@ -25,7 +25,7 @@ if (isset($_POST['opcion'])) {
                 }
                 break;
             case 'get_inputs':
-                $sql = 'select message from testimonio order by create_at asc limit 100;';
+                $sql = 'select t.message, u.name from testimonio as t left join users as u on t.id_user = u.id_user order by create_at asc limit 100;';
                 $data = ejecutarConsulta_retornaFilas($sql, [] , false);
                 
                 if ($data) {

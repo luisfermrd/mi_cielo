@@ -2,6 +2,7 @@ const messageChatList = document.querySelector('#chat_vacio');
 const chatMessages = document.getElementById("chat-messages");
 const messageInput = document.getElementById("message-input");
 const sendButton = document.getElementById("send-button");
+var container = document.querySelector('.chat-list-user');
 
 let conversation_id = 0;
 let id_user = 0;
@@ -86,7 +87,7 @@ async function cargarListaDeChat() {
 
                     chatInfoDiv.addEventListener('click', (event) => {
                         chatMessages.innerHTML = '';
-                        cargarMensajes(e.conversation_id, e.id_user)
+                        cargarMensajes(e.conversation_id, e.id_user, e.user_name)
                     });
 
                 });
@@ -98,7 +99,7 @@ async function cargarListaDeChat() {
 cargarListaDeChat()
 
 
-async function cargarMensajes(id_c, id_u) {
+async function cargarMensajes(id_c, id_u, name) {
     conversation_id = id_c;
     id_user = id_u;
     let data = new FormData();
@@ -116,6 +117,7 @@ async function cargarMensajes(id_c, id_u) {
         processData: false,
         success: function (response) {
             if (response.status == 1) {
+                $('#chat_name').text(name);
                 response.data.forEach(e => {
                     if (e.id_user != 1) {
                         addMessage(e.content, "sent");
@@ -226,16 +228,23 @@ async function verificarListaDeChat() {
                         if (!exist) {
                             let msg = div.querySelector('.chat-info-left p');
                             msg.textContent = e.last_message_content;
-                            let num = div.querySelector('.chat-info-ringth');
-                            num.insertAdjacentHTML('afterbegin', `<span class="num_message ${e.id_user}">${e.unread_messages_count}</span>`);
+                            
                             let hour = div.querySelector('.chat-info-ringth .hour');
                             hour.textContent = e.conversation_time;
+                            if (conversation_id == 0 && id_user == 0) {
+                                let num = div.querySelector('.chat-info-ringth');
+                                num.insertAdjacentHTML('afterbegin', `<span class="num_message ${e.id_user}">${e.unread_messages_count}</span>`);
+                            }
+                            container.insertBefore(div, container.firstChild);
                         } else if (exist.textContent != e.unread_messages_count) {
                             let msg = div.querySelector('.chat-info-left p');
                             msg.textContent = e.last_message_content;
-                            exist.textContent = e.unread_messages_count;
+                            if (conversation_id == 0 && id_user == 0) {
+                                exist.textContent = e.unread_messages_count;
+                            }
                             let hour = div.querySelector('.chat-info-ringth .hour');
                             hour.textContent = e.conversation_time;
+                            container.insertBefore(div, container.firstChild);
                         }
 
 
@@ -274,7 +283,15 @@ async function message() {
             if (response.status == 1 && response.data.length != 0) {
                 response.data.forEach(e => {
                     addMessage(e.content, "received");
-                    see()
+                    see();
+                    let div = document.getElementById(id_user);
+                    $('.' + id_user).remove();
+                    let msg = div.querySelector('.chat-info-left p');
+                    msg.textContent = e.content;
+                    let hour = div.querySelector('.chat-info-ringth .hour');
+                    hour.textContent = e.date_send.split(' ')[1];
+                    container.insertBefore(div, container.firstChild);
+
                 });
                 chatMessages.scrollTop = chatMessages.scrollHeight;
 

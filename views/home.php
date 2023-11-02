@@ -23,22 +23,37 @@ if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
             <div class="swiper mySwiper" style="height: 85vh;">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="../public/img/img5.png" alt="">
+                        <img src="../public/img/slider.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../public/img/slider1.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../public/img/slider2.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../public/img/slider3.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../public/img/slider4.webp" alt="">
                     </div>
                     <div class="swiper-slide">
                         <img src="../public/img/img.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../public/img/img1.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../public/img/img3.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
                         <img src="../public/img/img6.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
                         <img src="../public/img/img2.jpeg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../public/img/img5.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../public/img/img1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../public/img/img3.jpg" alt="">
                     </div>
                 </div>
                 <div class="swiper-button-next" style="color: #e7008a;"></div>
@@ -56,9 +71,9 @@ if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
                 <div class="col d-flex align-content-center justify-content-center">
                     <a href="violencia/fisica-psicologica.php" style="text-decoration: none; color: black;">
                         <div class="card" style="width: 15rem;">
-                            <img src="../public/img/violencia.png" class="card-img-top" alt="..." style="min-height: 15rem;">
+                            <img src="../public/img/violencia.jpg" class="card-img-top" alt="..." style="min-height: 15rem;">
                             <div class="card-body text-center">
-                                <p class="card-text">Violencia física y / o psicológica</p>
+                                <p class="card-text">Física y / o psicológica</p>
                             </div>
                         </div>
                     </a>
@@ -86,7 +101,7 @@ if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
                 <div class="col d-flex align-content-center justify-content-center">
                     <a href="violencia/politica.php" style="text-decoration: none; color: black;">
                         <div class="card" style="width: 15rem;">
-                            <img src="../public/img/violencia-politica.jpg" class="card-img-top" alt="..." style="min-height: 15rem;">
+                            <img src="../public/img/violencia-politica.png" class="card-img-top" alt="..." style="min-height: 15rem;">
                             <div class="card-body">
                                 <p class="card-text text-center">Violencia politica</p>
                             </div>
@@ -96,7 +111,7 @@ if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
                 <div class="col d-flex align-content-center justify-content-center">
                     <a href="violencia/acoso-sexual.php" style="text-decoration: none; color: black;">
                         <div class="card" style="width: 15rem;">
-                            <img src="../public/img/violencia5.png" class="card-img-top" alt="..." style="min-height: 15rem;">
+                            <img src="../public/img/violencia5.jpeg" class="card-img-top" alt="..." style="min-height: 15rem;">
                             <div class="card-body">
                                 <p class="card-text text-center">Acoso Sexual</p>
                             </div>

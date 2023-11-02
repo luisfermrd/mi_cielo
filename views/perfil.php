@@ -59,7 +59,7 @@ if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
                             <th scope="col">#</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Numero</th>
-                            <th scope="col">Mensaje</th>
+                            <th scope="col">Correo</th>
                             <th scope="col">Opcion</th>
                         </tr>
                     </thead>
@@ -113,9 +113,8 @@ if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 1) {
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="message-text" class="col-form-label">Dejale un breve mensaje: (Opcional)</label>
-                                <textarea class="form-control" rows="2" id="message-text" name="mensaje" onkeyup="countChars(this)"></textarea>
-                                <p><span id="num_caracter">0</span>/100</p>
+                                <label for="email" class="form-label">Correo electronico</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="modal-footer">
                                 <div class="botones">

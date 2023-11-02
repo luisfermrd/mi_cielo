@@ -24,37 +24,18 @@ if (!isset($_SESSION["id_user"]) || $_SESSION["role"] != 0) {
             <section class="chat-container">
                 <aside class="chat-list-user">
                     <h3 id="chat_vacio">Chat vacio</h3>
-                    <!-- <div class="chat-info">
-                        <img src="../../public/img/icon.png" alt="icono">
-                        <div class="chat-info-details">
-                            <div class="chat-info-left">
-                                <h3>Luis Miranda</h3>
-                                <p>Hola</p>
-                            </div>
-                            <div class="chat-info-ringth">
-                                <span>10</span>
-                                <span>10:30 pm</span>
-                            </div>
-                        </div>
-
-                    </div> -->
                 </aside>
                 <article class="chat-section">
                     <div id="chat">
                         <div class="chat-head">
                             <img src="../../public/img/icon.png" alt="icono">
                             <div class="chat-head-name">
-                                <h3>Luis Miranda</h3>
+                                <h3 id="chat_name">Luis Miranda</h3>
                                 <i class='bx bx-x' id="closeChat"></i>
                             </div>
                         </div>
                         <div class="chat-body" id="chat-messages">
-                            <!-- <div class="message received">
-                            <div class="message-bubble">¡Hola! ¿Cómo estás?</div>
-                        </div>
-                        <div class="message sent">
-                            <div class="message-bubble">Hola, estoy bien, ¿y tú?</div>
-                        </div> -->
+
                         </div>
                         <div class="chat-footer">
                             <input type="text" id="message-input" placeholder="Escribe un mensaje" />

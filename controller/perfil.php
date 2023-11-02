@@ -28,7 +28,7 @@ if (isset($_POST['opcion'])) {
                 $nombre = isset($_POST["nombre"]) ? $_POST["nombre"] : "";
                 $indicativo = isset($_POST["indicativo"]) ? $_POST["indicativo"] : "";
                 $numero = isset($_POST["numero"]) ? $_POST["numero"] : "";
-                $mensaje = isset($_POST["mensaje"]) ? $_POST["mensaje"] : "";
+                $mensaje = isset($_POST["email"]) ? $_POST["email"] : "";
                 $cadenaSinEspacios = preg_replace("/\s+/", "", $numero);
                 $number_phone = $indicativo.' '.$cadenaSinEspacios;
                 $sql = 'insert into contacts (id_user, name, number_phone, message) values (?, ?, ?, ?)';
